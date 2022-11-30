@@ -1,4 +1,5 @@
-const app = require('./app')
+const express = require('express')
+const app = express()
 
 async function Main(){
     await app.listen('3000')

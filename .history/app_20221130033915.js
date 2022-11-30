@@ -5,8 +5,6 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req,res)=>{
-    res.send('Dentro de la ruta principal')
+app.get('/', (res,req)=>{
+    res.send('Estas dentro de la ruta principal')
 })
-
-module.exports = app
