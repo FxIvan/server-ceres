@@ -10,4 +10,6 @@ app.get('/', (req,res)=>{
     res.send('Dentro de la ruta principal')
 })
 
+app.use('/v1/endpoint/request-linux', require('./routes/commandLinuxRoute'))
+
 module.exports = app
