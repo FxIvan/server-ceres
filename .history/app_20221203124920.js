@@ -10,6 +10,5 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/v1/endpoint/request-linux', require('./routes/commandLinuxRoute'))
-app.use('/v2/endpoint/pingip', require('./routes/pingRoute'))
 
 module.exports = app

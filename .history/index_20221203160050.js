@@ -13,6 +13,7 @@ async function Main(){
     await app.listen(process.env.PORT_SERVER)
     log_file.write(`${now} | MSG | Servidor levantado por el puerto -> ${process.env.PORT_SERVER} \n`)
 
+    const { exec } = require("child_process");
 }
 
 Main()
