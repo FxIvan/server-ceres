@@ -1,0 +1,8 @@
+3/12/2022 14:06:52 | MSG | Servidor levantado por el puerto -> 3001 
+3/12/2022 14:06:58 | MSG | Conectado de la DB 
+3/12/2022 14:06:59 | ERR | Algunos de los Campos no fue ingresado 
+3/12/2022 14:07:55 | MSG | Servidor levantado por el puerto -> 3001 
+3/12/2022 14:07:56 | MSG | Conectado de la DB 
+3/12/2022 14:10:38 | ERR | Algunos de los Campos no fue ingresado 
+3/12/2022 14:10:57 | MSG | Peticion POST exitosa, se guardo el comando -> cat
+3/12/2022 14:11:07 | MSG | Peticion GET exitosa, COMANDO  -> cat,cat,cat
