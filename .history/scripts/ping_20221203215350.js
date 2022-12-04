@@ -9,7 +9,7 @@ const script_Ping = (infoip) =>{
 
     var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
 
-    log_file.write(`${now} | MSG |  Analyzing PING to the IP -> ${infoip} .....\n`)
+    log_file.write(`${now} | MSG |  Analyzing PING to the IP -> ${INFOIP}\n`)
 
     exec( `/home/eris/server-ceres/scripts/ping.sh ${infoip}` , (error, stdout, stderr) => {
         if (error) {
