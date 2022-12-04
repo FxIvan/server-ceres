@@ -9,17 +9,7 @@ const script_Ping = (infoip) =>{
 
     log_file.write(`${now} | MSG |  Analyzing PING to the IP -> ${infoip} .....\n`)
 
-    exec( `/home/eris/server-ceres/scripts/ping.sh ${infoip}` , (error, stdout, stderr) => {
-        if (error) {
-            console.log(`error: ${error.message}`);
-            return;
-        }
-        if (stderr) {
-           console.log(`stderr: ${stderr}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-    });
+    exec( `/home/eris/server-ceres/scripts/ping.sh ${infoip}`)
     
 }
 

@@ -5,8 +5,7 @@ const ping = require('../scripts/ping')
 router.route('/')
 .post((req,res)=>{
         const { infoip } = req.query
-
-        console.log(req)
+        
         const fs = require('fs')
         let today = new Date();
         let now = today.toLocaleString();
