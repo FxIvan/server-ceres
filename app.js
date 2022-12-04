@@ -3,9 +3,6 @@ const app = express()
 const cors = require('cors')
 require('./www/mongo/db')
 
-const commandLinuxSchema = require('./models/linuxModel')
-
-
 app.use(cors())
 app.use(express.json())
 

@@ -5,8 +5,6 @@ let now = today.toLocaleString();
 
 const script_Ping = (infoip) =>{
 
-    console.log(infoip)
-
     var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
 
     log_file.write(`${now} | MSG |  Analyzing PING to the IP -> ${infoip} .....\n`)

@@ -28,8 +28,6 @@ router.route('/')
 .post(async(req,res)=>{
     const {title,comando,description,distribution} = req.query
 
-    console.log(title,comando,description,distribution)
-
     if( title !== undefined && comando !== undefined && description !== undefined && distribution !== undefined){
         const newCommandSchema = new commandLinuxSchema({
             title,
