@@ -4,7 +4,7 @@ const script_Ping = (infoip) =>{
 
     console.log(infoip)
     
-    exec( `./home/eris/server-ceres/scripts/ping.sh '${infoip}` , (error, stdout, stderr) => {
+    exec( __dirname + `./ping.sh ${infoip}` , (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;

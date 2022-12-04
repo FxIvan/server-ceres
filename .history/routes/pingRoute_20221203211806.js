@@ -7,6 +7,9 @@ let today = new Date();
 let now = today.toLocaleString();
 var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
 
+        log_file.write(`${now} | MSG |i desde ping.js ->  ${infoip} \n`)
+
+
    exec(`/home/eris/server-ceres/scripts/ping.sh ${infoip} ` , (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
@@ -17,8 +20,6 @@ var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags 
             return;
         }
         console.log(`stdout: ${stdout}`);
-
-        log_file.write(`${now} | MSG | Realizando ..... PING a la IP ->  ${infoip} \n`)
     });
     
 }
