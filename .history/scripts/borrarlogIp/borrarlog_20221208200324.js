@@ -9,7 +9,7 @@ const script_BorrarLog = (infoip) =>{
 
     log_file.write(`${now} | MSG |  Borrando el log de la IP -> ${infoip}\n`)
 
-    exec( `/home/eris/server-ceres/scripts/borrarlogIp/borrarlog.sh ${infoip}`)
+    exec( `/home/eris/server-ceres/scripts/borrarlog.sh ${infoip}`)
     
 }
 
