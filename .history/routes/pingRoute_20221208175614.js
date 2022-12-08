@@ -12,23 +12,12 @@ router.route('/')
         let today = new Date();
         let now = today.toLocaleString();
         var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
-        var log_fileIP = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
 
         ping(infoip)
 
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
 
         readLog(infoip)
-
-        setTimeout(()=>{
-                console.log('Se ejecuto el SetTimeOut')
-                fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
-                        if (err) return console.error(err);
-                        const dataString = data.toString();
-                        console.log(dataString);
-                        log_fileIP.write(dataString)
-                })
-        },10000)
     
 })
 

@@ -12,7 +12,6 @@ router.route('/')
         let today = new Date();
         let now = today.toLocaleString();
         var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
-        var log_fileIP = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
 
         ping(infoip)
 
@@ -26,7 +25,6 @@ router.route('/')
                         if (err) return console.error(err);
                         const dataString = data.toString();
                         console.log(dataString);
-                        log_fileIP.write(dataString)
                 })
         },10000)
     
