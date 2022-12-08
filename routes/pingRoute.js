@@ -19,12 +19,16 @@ router.route('/')
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
 
         setTimeout(()=>{
-                console.log('Se ejecuto el SetTimeOut')
                 fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
-                        if (err) return console.error(err);
+                        if (err){
+                         res.json({message:'Erroe al leer el archivo', status:400});
+                         log_file.write(`${now} | ERR | Error al ejecuta la libreria FS ->${err} \n`)
+                        }
                         const dataString = data.toString();
                         res.json({message:dataString , status:200})
                 })
+
+                log_file.write(`${now} | MSG | Se ejecuto libreria FS, que lee el log de la ip ->${infoip} \n`)
         },10000)
     
 })
