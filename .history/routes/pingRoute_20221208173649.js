@@ -17,7 +17,6 @@ router.route('/')
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
 
         setTimeout(()=>{
-                console.log('Se ejecuto el SetTimeOut')
                 fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
                         if (err) return console.error(err);
                         const dataString = data.toString();
