@@ -14,7 +14,8 @@ router.route('/')
         let today = new Date();
         let now = today.toLocaleString();
         var log_file = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
-       
+        var log_fileIP = fs.createWriteStream(process.cwd() + `/log/syncrodb.log`, {flags : 'a'});
+
         ping(infoip)
 
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
@@ -27,9 +28,9 @@ router.route('/')
                         }
                         const dataString = data.toString();
                         res.json({message:dataString , status:200})
-                        script_BorrarLog(infoip)
-                        log_file.write(`${now} | MSG | Delete Log -> ${infoip}`)
-                     
+                        setTimeout(()=>{
+                                script_BorrarLog(infoip)
+                        },2000)
                 })
 
                 log_file.write(`${now} | MSG | Se ejecuto libreria FS, que lee el log de la ip ->${infoip} \n`)
