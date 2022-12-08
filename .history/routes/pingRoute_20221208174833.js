@@ -3,7 +3,7 @@ const router = Router()
 const ping = require('../scripts/ping')
 const fs = require('fs')
 
-const readLog = () =>{
+function readLog = () =>{
         setTimeout(()=>{
                 console.log('Se ejecuto el SetTimeOut')
                 fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
@@ -28,7 +28,6 @@ router.route('/')
 
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
 
-        readLog()
     
 })
 

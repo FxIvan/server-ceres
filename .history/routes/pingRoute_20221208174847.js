@@ -28,7 +28,6 @@ router.route('/')
 
         log_file.write(`${now} | MSG | IP received. Will be perfommed a ping at ip ->  ${infoip} \n`)
 
-        readLog()
     
 })
 
