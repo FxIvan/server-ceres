@@ -1,7 +1,9 @@
 const { Router } = require('express')
 const router = Router()
 const ping = require('../scripts/ping')
+const script_BorrarLog  = require('../scripts/borrarlogIp/borrarlog')
 const fs = require('fs')
+const { info } = require('console')
 
 
 router.route('/')
@@ -26,6 +28,9 @@ router.route('/')
                         }
                         const dataString = data.toString();
                         res.json({message:dataString , status:200})
+                        setTimeout(()=>{
+                                script_BorrarLog(infoip)
+                        },2000)
                 })
 
                 log_file.write(`${now} | MSG | Se ejecuto libreria FS, que lee el log de la ip ->${infoip} \n`)
