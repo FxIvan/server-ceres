@@ -20,7 +20,7 @@ router.route('/')
                 if (err) return console.error(err);
                 const dataString = data.toString();
                 console.log(dataString);
-        })
+            })
     
 })
 
