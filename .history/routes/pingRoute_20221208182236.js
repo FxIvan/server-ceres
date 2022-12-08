@@ -23,7 +23,7 @@ router.route('/')
                 fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
                         if (err) return console.error(err);
                         const dataString = data.toString();
-                        res.json({message:dataString , status:200})
+                        res.json({message:dataString , status:2000})
                 })
         },10000)
     
