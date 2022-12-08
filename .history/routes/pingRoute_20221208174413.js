@@ -18,7 +18,7 @@ router.route('/')
 
 
               
-                await fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
+                fs.readFile(`/home/eris/server-ceres/log/logPing/${infoip}logping.log`,(err,data)=>{
                         if (err) return console.error(err);
                         const dataString = data.toString();
                         console.log(dataString);
